@@ -5,7 +5,7 @@ export default function StopBtn({
   setAllComponents,
   setIsTimerRunning,
 }) {
-  const doTheMagic = () => {
+  const stopHandler = () => {
     if (allComponents.hasStarted === true) {
       setAllComponents({
         ...allComponents,
@@ -22,7 +22,7 @@ export default function StopBtn({
       type="button"
       className="btn btn-secondary"
       title="Stop the session"
-      onClick={doTheMagic}
+      onClick={stopHandler}
     >
       <span className="oi oi-media-stop" />
     </button>

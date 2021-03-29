@@ -3,7 +3,7 @@ import { minutesToDuration, secondsToDuration } from "../utils/duration";
 import ProgressBar from "./ShowProgressBar";
 
 export default function DisplayDuration({ isTimerRunning, allComponents }) {
-  function theHappening() {
+  function mainDisplay() {
     let titleText = "";
     if (allComponents.focusBreak) {
       titleText = `Focusing for ${minutesToDuration(
@@ -38,7 +38,7 @@ export default function DisplayDuration({ isTimerRunning, allComponents }) {
   }
 
   if (allComponents.hasStarted) {
-    return theHappening();
+    return mainDisplay();
   } else {
     return null;
   }

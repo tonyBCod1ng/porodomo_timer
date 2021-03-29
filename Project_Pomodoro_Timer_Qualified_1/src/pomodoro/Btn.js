@@ -9,7 +9,7 @@ export default function Btn({
   function clamp(n, min, max) {
     return n > max ? max : n < min ? min : n;
   }
-  const doSomething = () => {
+  const incrementDecrease = () => {
     if (dataTestid === "decrease-focus") {
       const newValue = clamp(
         allComponents.focusVal - allComponents.focusAdjust,
@@ -54,7 +54,7 @@ export default function Btn({
       type="button"
       className="btn btn-secondary"
       data-testid={dataTestid}
-      onClick={doSomething}
+      onClick={incrementDecrease}
       disabled={allComponents.hasStarted}
     >
       <span className={className} />
